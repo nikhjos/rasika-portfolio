@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap&family=Madimi+One&display=swap&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 .purple-mode {
-  --bg-color: rgb(54, 4, 54);
+  --bg-color: linear-gradient(to bottom left, black, rgb(49, 44, 44));
   --text-black-color: black;
   --intro-bottom-div: rgb(152, 131, 131);
   --navlink-color: rgb(245, 236, 236);
@@ -30,7 +30,7 @@
 body {
   display: flex;
   justify-content: center;
-  background-color: var(--bg-color);
+  background: var(--bg-color);
   color: var(--text-white-color);
 }
 
@@ -91,7 +91,7 @@ section {
   justify-content: space-around;
   align-items: center;
   gap: 1rem;
-  background-color: var(--bg-color);
+  background: var(--bg-color);
 }
 
 .logo {
@@ -166,18 +166,17 @@ section {
     height: 4rem;
     box-shadow: 0px 1px 5px rgb(177, 149, 149);
     z-index: 300;
-    background-color: white;
   }
 
   .navbar {
     width: 100%;
-    padding: 0 2rem;
+    padding: 0 3rem;
     height: 4rem;
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 0.8rem;
+    gap: 0.6rem;
     background-color: var(--bg-color);
   }
 
@@ -191,19 +190,19 @@ section {
 
   .logo p {
     padding: 0.1rem 0.3rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
     cursor: pointer;
     font-weight: 600;
   }
 
   .pagelinks {
     display: flex;
-    gap: 0.5rem;
+    gap: 0.4rem;
   }
 
   .singleLink {
     padding: 0.3rem 0.6rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
     cursor: pointer;
     border: none;
     outline: none;
@@ -216,8 +215,8 @@ section {
     place-items: center;
     align-items: center;
     background-color: black;
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.3rem;
+    height: 1.3rem;
     border: 2px solid black;
     overflow: hidden;
     border-radius: 50%;
@@ -234,7 +233,7 @@ section {
   }
 
   .purpleTheme {
-    background-color: purple;
+    background-color: black;
     width: 100%;
     height: 100%;
     border-radius: 50%;
@@ -248,7 +247,7 @@ section {
 /*----------------hero-------------------*/
 
 #hero {
-  height: max-content;
+  height: auto;
   width: 100%;
   display: none;
   margin-top: 6rem;
@@ -329,12 +328,12 @@ section {
 .link img {
   width: 2.5rem;
   color: grey;
-  filter: grayscale(1);
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
 .link img:hover {
-  filter: grayscale(0);
+  transform: scale(1.2);
 }
 
 .hero-body {
@@ -393,6 +392,7 @@ section {
     height: auto;
     width: 100%;
     display: none;
+    margin-top: 5rem;
   }
 
   .hero-center {
@@ -404,7 +404,7 @@ section {
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    margin-top: 5rem;
+    margin-top: 0rem;
   }
 
   .hero-header {
@@ -412,7 +412,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.5rem;
     align-items: center;
   }
 
@@ -433,7 +433,7 @@ section {
   .heroTop {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.3rem;
     width: 100%;
     align-items: center;
   }
@@ -455,6 +455,38 @@ section {
 
   .hero-body {
     display: none;
+  }
+
+  .heroBtns {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .heroBtns button {
+    padding: 0.3rem 0.8rem;
+    font-size: 1.1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    border: 2px solid black;
+    outline: none;
+    transition: all 0.3s linear;
+  }
+
+  .heroBtns a {
+    padding: 0.3rem 0.8rem;
+    font-size: 1.1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    border: 2px solid black;
+    color: white;
+    background-color: rgb(22, 20, 20);
+    outline: none;
+    transition: all 0.3s linear;
+  }
+
+  .heroBtns button:hover {
+    background-color: rgb(85, 36, 85);
+    color: white;
   }
 }
 
@@ -535,23 +567,30 @@ section {
   }
 
   .about-item {
+    margin: 0 auto;
     border-color: purple;
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
   }
 
+  .about-item div p {
+    width: 100%;
+    text-align: center;
+  }
+
   .collage div {
     display: grid;
-    grid-template-columns: 30% auto;
+    grid-template-columns: 30% 60%;
     place-items: center;
     gap: 1rem;
   }
 
   .about-item h3 {
     color: var(--text-color);
+    text-align: center;
   }
 
   .exp p {
@@ -708,10 +747,9 @@ form h3 {
   transform: translateX(-50%);
   z-index: 2;
   background-color: white;
-
   padding: 0 10px;
-  color: var(--bg-color);
   font-size: 1.5rem;
+  color: var(--text-black-color);
 }
 
 .form-field {
