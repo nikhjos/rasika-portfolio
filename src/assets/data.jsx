@@ -7,10 +7,10 @@ import gmail from "../assets/gmail.png";
 import facebook from "../assets/facebook.png";
 
 export const pageLinks = [
-  { id: nanoid(), name: "Home", href: "hero" },
-  { id: nanoid(), name: "About", href: "about" },
-  { id: nanoid(), name: "Skill", href: "skill" },
-  { id: nanoid(), name: "Contact", href: "contact" },
+  { id: nanoid(), name: "Home", href: "#hero" },
+  { id: nanoid(), name: "About", href: "#about" },
+  { id: nanoid(), name: "Skill", href: "#skill" },
+  { id: nanoid(), name: "Contact", href: "#contact" },
 ];
 
 export const singlePageLinks = [

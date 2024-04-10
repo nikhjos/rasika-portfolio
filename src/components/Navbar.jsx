@@ -1,44 +1,32 @@
 import React from "react";
 import useToggle from "../context";
 import { pageLinks } from "../assets/data";
-import Purple from "./Purple";
-import White from "./White";
+import { FaBars } from "react-icons/fa";
+import Logo from "./Logo";
 
 const Navbar = () => {
-  const { theme, toggle, pageActive } = useToggle();
+  // const { theme, toggle, pageActive } = useToggle();
 
   return (
-    <section className="active">
-      <div id="navbar">
-        <div className="navbar">
-          <div className="logo">
-            <p>RJ</p>
-          </div>
-          <div className="pagelinks">
-            {pageLinks.map((link, index) => {
-              const { id, href, name } = link;
-              return (
-                <button
-                  type="button"
-                  key={id}
-                  href={href}
-                  className="singleLink"
-                  onClick={() => pageActive(index)}
-                >
-                  {name}
-                </button>
-              );
-            })}
-          </div>
-
-          <div className="theme">
-            <button type="button" onClick={toggle}>
-              {theme ? <White /> : <Purple />}
-            </button>
-          </div>
+    <div id="navbar">
+      <section className="navbar">
+        <Logo />
+        <div className="pagelinks">
+          {pageLinks.map((link, index) => {
+            const { id, href, name } = link;
+            return (
+              <a type="button" key={id} href={href} className="singleLink">
+                {name}
+              </a>
+            );
+          })}
         </div>
-      </div>
-    </section>
+
+        <button type="button" className="btn">
+          <FaBars />
+        </button>
+      </section>
+    </div>
   );
 };
 

@@ -1,12 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+const getThemeFromLocal = () => {
+  return localStorage.getItem("theme-store") || false;
+};
 
 const useToggle = () => {
-  const [theme, setTheme] = useState(false);
+  const [theme, setTheme] = useState(getThemeFromLocal());
+
+  const newTheme = !theme;
 
   const toggle = () => {
-    const newTheme = !theme;
     setTheme(newTheme);
-    document.body.classList.toggle("purple-mode", newTheme);
+    document.body.classList.toggle("dark-mode", newTheme);
   };
 
   const pageActive = (page) => {
