@@ -6,12 +6,17 @@ const getThemeFromLocal = () => {
 
 const useToggle = () => {
   const [theme, setTheme] = useState(getThemeFromLocal());
+  const [sidebar, setSitebar] = useState(false);
 
   const newTheme = !theme;
 
   const toggle = () => {
     setTheme(newTheme);
     document.body.classList.toggle("dark-mode", newTheme);
+  };
+
+  const showSidebar = () => {
+    setSitebar(!sidebar);
   };
 
   const pageActive = (page) => {
@@ -37,7 +42,7 @@ const useToggle = () => {
     contact.classList.remove("active");
   };
 
-  return { theme, toggle, pageActive };
+  return { sidebar, showSidebar };
 };
 
 export default useToggle;

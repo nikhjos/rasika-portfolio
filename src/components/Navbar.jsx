@@ -1,11 +1,11 @@
 import React from "react";
 import useToggle from "../context";
 import { pageLinks } from "../assets/data";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "./Logo";
 
 const Navbar = () => {
-  // const { theme, toggle, pageActive } = useToggle();
+  const { sidebar, showSidebar } = useToggle();
 
   return (
     <div id="navbar">
@@ -22,8 +22,8 @@ const Navbar = () => {
           })}
         </div>
 
-        <button type="button" className="btn">
-          <FaBars />
+        <button type="button" className="btn" onClick={showSidebar}>
+          {sidebar ? <FaTimes /> : <FaBars />}
         </button>
       </section>
     </div>
