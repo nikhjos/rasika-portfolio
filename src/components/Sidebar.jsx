@@ -1,16 +1,20 @@
 import React from "react";
-import { pageLinks, socialLinks } from "../assets/data";
+import { pageLinks } from "../assets/data";
 import useToggle from "../context";
 
-const Sidebar = () => {
-  const { sidebar } = useToggle();
-
+const Sidebar = ({ sidebar, showSidebar }) => {
   return (
     <div className={sidebar ? "sidebar showSidebar" : "sidebar"}>
-      {pageLinks.map((link, index) => {
+      {pageLinks.map((link) => {
         const { id, href, name } = link;
         return (
-          <a type="button" key={id} href={href} className="sidebarLink">
+          <a
+            type="button"
+            key={id}
+            href={href}
+            className="sidebarLink"
+            onClick={showSidebar}
+          >
             {name}
           </a>
         );

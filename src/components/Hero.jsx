@@ -58,14 +58,14 @@ const Hero = () => {
           </div>
         </div>
         <div className="hero-body">
-          <h3>Hi..</h3>
+          <h3>Hey there</h3>
           <p>
-            patient-focused medical officer offering more than 6 years of
-            experiance in the hospital and medicin department. business-savvy
-            and accomplished in driving growth when leading interdisciplinary
-            teams and continuously improving care delivery. prepared to bring
-            leaddership, talent, and expeerties to growing healthcare
-            organization
+            I'm Rasika Rajendra Joshi, patient-focused medical officer offering
+            more than 6 years of experiance in the hospital and medicin
+            department. business-savvy and accomplished in driving growth when
+            leading interdisciplinary teams and continuously improving care
+            delivery. prepared to bring leaddership, talent, and expeerties to
+            growing healthcare organization
           </p>
         </div>
         <div className="heroBtns">

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   About,
   Contact,
@@ -10,15 +10,21 @@ import {
 } from "./components";
 
 const App = () => {
+  const [sidebar, setSitebar] = useState(false);
+
+  const showSidebar = () => {
+    setSitebar(!sidebar);
+  };
+
   return (
     <>
-      <Navbar />
+      <Navbar sidebar={sidebar} showSidebar={showSidebar} />
       <Hero />
       <About />
       <Skills />
       <Contact />
       <Footer />
-      <Sidebar />
+      <Sidebar sidebar={sidebar} showSidebar={showSidebar} />
     </>
   );
 };

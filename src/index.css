@@ -255,7 +255,7 @@ button {
   }
 
   .hero-name h2 {
-    font-size: 3rem;
+    font-size: 2.9rem;
     font-family: "Bungee Spice", sans-serif;
   }
 
@@ -573,22 +573,57 @@ form button {
   top: 0;
   right: 0;
   transform: translateX(100%);
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--tx-color1);
   width: 50%;
   height: 100vh;
-}
-
-.sidebarLink {
-  font-size: 1.5rem;
-  color: var(--white-color);
-  cursor: pointer;
+  background-color: var(--tx-color1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  animation: sidebarhidden 0.3s linear;
 }
 
 .sidebar.showSidebar {
-  transform: translateX(0%);
+  transform: translateX(0);
+  animation: sidebarshow 0.3s linear;
+}
+
+@keyframes sidebarshow {
+  0% {
+    transform: translateX(100%);
+  }
+
+  50% {
+    transform: translateX(50%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes sidebarhidden {
+  0% {
+    transform: translateX(0%);
+  }
+
+  50% {
+    transform: translateX(50%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.sidebarLink {
+  font-size: 2rem;
+  color: var(--white-color);
+}
+
+@media screen and (min-width: 600px) {
+  .sidebar {
+    display: none;
+  }
 }

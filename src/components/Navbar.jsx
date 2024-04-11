@@ -4,9 +4,7 @@ import { pageLinks } from "../assets/data";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "./Logo";
 
-const Navbar = () => {
-  const { sidebar, showSidebar } = useToggle();
-
+const Navbar = ({ sidebar, showSidebar }) => {
   return (
     <div id="navbar">
       <section className="navbar">
