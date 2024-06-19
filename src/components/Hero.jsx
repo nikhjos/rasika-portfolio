@@ -4,7 +4,7 @@ import { socialLinks } from "../assets/data";
 import Wrapper from "../assets/Wrapper/Hero";
 
 import heroImg from "../assets/heroImage.jpg";
-import rasikaCv from "../assets/Rasikacvv.pdf";
+
 import useToggle from "../context";
 
 const Hero = () => {
@@ -69,9 +69,7 @@ const Hero = () => {
           </p>
         </div>
         <div className="heroBtns">
-          <a href={rasikaCv} download>
-            DownLoad Cv
-          </a>
+          <a href="/">DownLoad Cv</a>
           <button type="button" onClick={() => pageActive(4)}>
             Contact Me
           </button>
